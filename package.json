@@ -1,0 +1,21 @@
+{
+  "name": "video-tweaks-for-varzesh3",
+  "private": true,
+  "description": "Firefox add-on for video.varzesh3.com",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "web-ext lint",
+    "test": "node --test \"test/unit/*.test.js\"",
+    "test:e2e": "node --test --test-concurrency=1 \"test/e2e/*.test.js\"",
+    "check": "npm run lint && npm test",
+    "build": "web-ext build"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.51.0",
+    "web-ext": "^10.8.0"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Video Tweaks for Varzesh3",
+  "version": "1.0.0",
+  "description": "On video.varzesh3.com: unmute on play, disable next-video autoplay, pick the highest quality and set a custom speed.",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://video.varzesh3.com/*"
+      ],
+      "js": [
+        "defaults.js",
+        "settings-bridge.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://video.varzesh3.com/*"
+      ],
+      "js": [
+        "player-tweaks.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "varzesh3-video-tweaks@iiriix",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

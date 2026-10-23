@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Tweaks for Varzesh3</title>
+  <style>
+    :root { color-scheme: light dark; font: 15px/1.4 system-ui, sans-serif; }
+    body { margin: 0; padding: 16px; max-width: 480px; }
+    label { display: flex; align-items: center; gap: 10px; padding: 10px 0; }
+    input[type="checkbox"] { width: 18px; height: 18px; margin: 0; }
+    .sub { padding-left: 28px; display: flex; align-items: center; gap: 10px; }
+    select { font: inherit; padding: 4px 6px; }
+    select:disabled { opacity: .5; }
+    .hint { font-size: 13px; opacity: .7; margin: 4px 0 0; }
+    #status { font-size: 13px; opacity: .7; min-height: 1.4em; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <label><input type="checkbox" id="unmute"> Unmute when the video starts playing</label>
+  <label><input type="checkbox" id="disableAutoplayNext"> Turn off "auto play next video"</label>
+  <label><input type="checkbox" id="customQuality"> Set quality</label>
+  <div class="sub">
+    <select id="quality" aria-label="Quality"></select>
+  </div>
+  <label><input type="checkbox" id="customSpeed"> Set playback speed</label>
+  <div class="sub">
+    <select id="speed" aria-label="Playback speed"></select>
+  </div>
+  <p class="hint">Only the qualities and speeds offered by the site's player are listed. If a video doesn't have the chosen quality, the closest lower one is used.</p>
+  <p class="hint">Changes apply to the current video too. Turning a feature off doesn't undo what it already changed.</p>
+  <div id="status" role="status"></div>
+  <script src="defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
