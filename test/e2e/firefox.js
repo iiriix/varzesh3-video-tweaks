@@ -18,7 +18,7 @@ import firefox from "selenium-webdriver/firefox.js";
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const ADDON_ID = JSON.parse(readFileSync(join(root, "manifest.json"), "utf8")).browser_specific_settings.gecko.id;
 
-export const VIDEO_URL = process.env.V3_TEST_URL || "https://video.varzesh3.com/video/566419/";
+export const VIDEO_URL = process.env.V3_TEST_URL || "https://video.varzesh3.ir/video/568113/";
 const ANDROID_UA = "Mozilla/5.0 (Android 14; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0";
 const SNAP_FIREFOX = "/snap/firefox/current/usr/lib/firefox/firefox";
 const SNAP_GECKODRIVER = "/snap/bin/geckodriver";

@@ -1,6 +1,6 @@
 # Video Tweaks for Varzesh3
 
-A Firefox add-on that makes videos on [video.varzesh3.com](https://video.varzesh3.com/) play the way you want.
+A Firefox add-on that makes videos on [video.varzesh3.com](https://video.varzesh3.com/) and [video.varzesh3.ir](https://video.varzesh3.ir/) play the way you want.
 
 ## Features
 

@@ -1,7 +1,7 @@
 {
   "name": "video-tweaks-for-varzesh3",
   "private": true,
-  "description": "Firefox add-on for video.varzesh3.com",
+  "description": "Firefox add-on for video.varzesh3.com and video.varzesh3.ir",
   "license": "MIT",
   "type": "module",
   "engines": {

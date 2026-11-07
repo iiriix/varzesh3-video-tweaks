@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Video Tweaks for Varzesh3",
-  "version": "1.0.0",
-  "description": "On video.varzesh3.com: unmute on play, disable next-video autoplay, pick the highest quality and set a custom speed.",
+  "version": "1.1.0",
+  "description": "On video.varzesh3.com and .ir: unmute on play, disable next-video autoplay, pick the highest quality and set a custom speed.",
   "icons": {
     "32": "icons/icon-32.png",
     "48": "icons/icon-48.png",
@@ -18,7 +18,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://video.varzesh3.com/*"
+        "https://video.varzesh3.com/*",
+        "https://video.varzesh3.ir/*"
       ],
       "js": [
         "defaults.js",
@@ -29,7 +30,8 @@
     },
     {
       "matches": [
-        "https://video.varzesh3.com/*"
+        "https://video.varzesh3.com/*",
+        "https://video.varzesh3.ir/*"
       ],
       "js": [
         "player-tweaks.js"
